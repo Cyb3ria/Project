@@ -3,6 +3,7 @@ session_start();
  include_once("class/login.class.php");
  	$login = new Login();
 
+ 	$_SESSION['naam']=$_GET['naam'];
 
     $all = $login->getAll();
 

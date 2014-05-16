@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
 		<img id="logoHomepage" src="images/logo2.png"/>
 
 	</header>
-
+	<h1><?= $_SESSION['naam']; ?></h1>
 
 	<div id="homeDiv">
 
