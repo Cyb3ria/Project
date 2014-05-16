@@ -26,8 +26,8 @@ session_start();
 <div id="welkomdiv">
 	<img id="avatar" src="images/avatar.jpg" alt="">
 <div id="loginpicture">loginpic</div>
-	<h1 id="welcome">Welkom</h1>
-	<h1 id="welcomeNaam"><?=$_SESSION['naam']; ?></h1>
+	<h1 id="welcome">Welkom <?= $_GET['naam'];?> </h1>
+	<h1 id="welcomeNaam"></h1>
 
 	<!--<form action="POST">
 

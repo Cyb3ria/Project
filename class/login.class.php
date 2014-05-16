@@ -33,7 +33,7 @@
 				$conn = new mysqli("localhost", "root", "azerty", "project");	
 				$sql="select * from tbl_login";
 				$result = $conn->query($sql);
-				$_SESSION['naam']=$this->m_sNaam;
+				
 				return $result;
 
 			}
@@ -47,6 +47,7 @@
 				('". $conn->real_escape_string($this->m_sNaam) ."' ,
 				 '". $conn->real_escape_string($this->m_iImage) ."')";
 				$conn->query($sql);
+				$_SESSION['naam']=$this->m_sNaam;
 
 			}
 
