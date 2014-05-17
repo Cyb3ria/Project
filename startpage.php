@@ -3,8 +3,6 @@ session_start();
  include_once("class/login.class.php");
  	$login = new Login();
 
- 	$_SESSION['naam']=$_GET['naam'];
-
     $all = $login->getAll();
 
  ?><!doctype html>
@@ -27,7 +25,7 @@ session_start();
 <div id="welkomdiv">
 	<img id="avatar" src="images/avatar.jpg" alt="">
 <div id="loginpicture">loginpic</div>
-	<h1 id="welcome">Welkom <?= $_GET['naam'];?> </h1>
+	<h1 id="welcome">Welkom</h1>
 	<h1 id="welcomeNaam"></h1>
 
 	<!--<form action="POST">

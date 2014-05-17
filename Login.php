@@ -42,7 +42,7 @@
 		</header>
 		<div id="loginDiv">
 			<h1>Hoe heet ik?</h1>
-			<form action="" id="loginForm" method="POST" enctype="multipart/form-data">
+			<form action="#" id="loginForm" method="POST" enctype="multipart/form-data">
 				<input name="naam" type="text" placeholder="John Snow"/>
 				<input accept="image/jpeg" name="file" type="file"/>
 				<button name="submit" type="submit">Doorgaan</button>
@@ -52,8 +52,8 @@
 			{
 				foreach($all as $a) { ?>    
 					<h4><strong>Profile:</strong></h4>
-					<a href="WelcomeSplash.php?naam=<?= $a['naam']?>">Naam: <?= $a['naam'] ?></br></a>       
-					<!--  <p>avatar: <img src="upload/<?= $a['avatar'] ?>"/></br></p>     -->        
+					<a class="click" data-log="<?= $a['naam'];?>" data-avatar="<?= $a['avatar'];?>" href="#">Naam: <?= $a['naam'] ?></br></a>       
+					<p>avatar: <img src="upload/<?= $a['avatar'] ?>"/></br></p>        
 			<?php } 
 			}
 			?> 
@@ -62,6 +62,8 @@
 		<div id="footer">
 			<h1>&copy; Memoro</h1>
 		</div>	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/jquery.js"></script>
 	</body>
 </html>
 
