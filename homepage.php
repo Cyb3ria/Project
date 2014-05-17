@@ -14,11 +14,20 @@
 		<img id="logoHomepage" src="images/logo2.png"/>
 
 	</header>
-	<h1><?= $_SESSION['naam']; ?></h1>
+
 
 	<div id="homeDiv">
+		<h1><?= $_SESSION['naam']; ?></h1>
+		<img src="upload/<?= $_SESSION['avatar'] ?>"/>
 
-		<p>dfdsf</p>
+		<ul id="mainMenu">
+			<li><a id="wieId" href="wieisdat.php">Wie</a></li>
+			<li><a id="watId" href="Notebook.php">Wat</a></li>
+			<li><a id="hoeId" href="denk.php">Hoe</a></li>
+		</ul>
+		<div class="clear">&nbsp;</div>
+
+		<a href="options.php" id="options">options</a>
 
 	</div>
 		<div class="clear">&nbsp;</div>
@@ -30,6 +39,4 @@
 	</div><!-- End wrapper -->
 	
 </body>
-	<script src="js/ScalingBg.js"></script>
 </html>
-

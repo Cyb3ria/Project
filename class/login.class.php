@@ -38,6 +38,39 @@
 
 			}
 
+		/*public function getImg()
+			{
+				$conn = new mysqli("localhost", "root", "azerty", "project");	
+				$sql="select avatar from tbl_login where naam =".$_GET['naam']."";
+				$result = $conn->query($sql);
+				
+				return $result;
+
+			}*/
+
+			/*public function getImg($userNaam)
+ 			 {
+
+				   $conn = new mysqli("localhost", "root", "azerty", "project");
+				   $sql = "SELECT loginID FROM tbl_user WHERE naam = '$userNaam'";
+				   echo $sql;
+				   $result = $conn->query($sql);
+				   
+
+				   if($result)
+				   {
+				    $results = mysqli_fetch_array($result, MYSQL_ASSOC);
+
+				    $naamUser = $_SESSION['naam'];
+				    $avatarUser = $_SESSION['avatar'];
+				    $userID = $results['loginID'];
+
+				    return $userID;
+				    return $avatarUser;
+				    return $naamUser;
+				   }
+				  }*/
+
 
 		public function save()
 			{
@@ -47,7 +80,7 @@
 				('". $conn->real_escape_string($this->m_sNaam) ."' ,
 				 '". $conn->real_escape_string($this->m_iImage) ."')";
 				$conn->query($sql);
-				$_SESSION['naam']=$this->m_sNaam;
+				//$_SESSION['naam']=$this->m_sNaam;
 
 			}
 
